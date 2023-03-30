@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from minkowskisum import minkowskisum
+from minkowskisum import minkowskisum, sort_vertices
 
 
 def main():
@@ -12,6 +12,8 @@ def main():
     msum = minkowskisum(polygon1, polygon2)
 
     # plot the polygons
+    polygon1 = sort_vertices(polygon1)
+    polygon2 = sort_vertices(polygon2)
     plt.figure(figsize=(7, 4))
     plt.fill(polygon1[:, 0], polygon1[:, 1], color='gray')
     plt.fill(polygon2[:, 0], polygon2[:, 1], color='darkgray')
