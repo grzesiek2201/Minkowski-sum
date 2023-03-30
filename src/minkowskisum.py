@@ -42,7 +42,7 @@ def minkowskisum(pol1, pol2):
     """
     msum = []
     pol1 = sort_vertices(pol1)
-    pol2 - sort_vertices(pol2)
+    pol2 = sort_vertices(pol2)
 
     # sort vertices so that is starts with lowest y-value
     min1, min2 = np.argmin(pol1[:, 1]), np.argmin(pol2[:, 1])  # index of vertex with min y value
